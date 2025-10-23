@@ -1,15 +1,17 @@
 {
   "name": "tuvi-neo",
+  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/implicit-invocation/tuvi-neo.git"
+  },
+  "homepage": "https://github.com/implicit-invocation/tuvi-neo#readme",
   "module": "index.ts",
   "type": "module",
-  "private": true,
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5"
-  },
-  "dependencies": {
-    "lunar-javascript": "^1.7.6"
   }
 }
