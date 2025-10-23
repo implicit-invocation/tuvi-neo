@@ -1,0 +1,311 @@
+# Vietnamese Ziwei Doushu (Tử Vi Đẩu Số) - TypeScript
+
+A TypeScript implementation of Vietnamese Ziwei Doushu (Tử Vi Đẩu Số) natal chart calculation. This library ports the "an sao" (star positioning) logic to generate complete astrological charts.
+
+## Features
+
+- ✅ **Clean API**: Single `generateLaSo()` function
+- ✅ **Type-Safe**: Full TypeScript support with complete type definitions
+- ✅ **Dual Calendar Support**: Gregorian (dương lịch) and Lunar (âm lịch)
+- ✅ **Multiple Output Formats**: JSON and human-readable text
+- ✅ **Direct Property Access**: Access chart data as typed properties
+- ✅ **140+ Stars**: Complete star positioning including 14 main stars, Tứ Hóa, auxiliary stars
+- ✅ **12 Palaces**: Full palace system with Lục Thân
+- ✅ **Bureau Calculation**: Automatic Cục (bureau) determination
+- ✅ **No UI Components**: Pure calculation engine
+
+## Installation
+
+```bash
+bun install
+```
+
+## Quick Start
+
+```typescript
+import { generateLaSo } from './src';
+
+const laso = generateLaSo({
+  name: 'Nguyễn Văn A',
+  gender: 'male',
+  birth: {
+    isLunar: false,      // Gregorian calendar
+    year: 1990,
+    month: 5,
+    day: 15,
+    hour: 8,
+    minute: 30,
+  },
+});
+
+// Access properties directly
+console.log(laso.Info.ChuMenh);     // "Phá quân"
+console.log(laso.Info.ThanCu);      // "Thân cư Phu thê"
+
+// Get JSON output
+console.log(laso.toJSONString());
+
+// Get human-readable text
+console.log(laso.toDisplayString());
+```
+
+## API Reference
+
+### `generateLaSo(input: GenerateLaSoInput): LaSoResult`
+
+Generate a complete Vietnamese Ziwei Doushu natal chart.
+
+**Parameters:**
+
+```typescript
+interface GenerateLaSoInput {
+  name: string;
+  gender: 'male' | 'female';
+  birth: {
+    isLunar: boolean;   // true = lunar (âm lịch), false = Gregorian (dương lịch)
+    year: number;       // e.g., 1990
+    month: number;      // 1-12
+    day: number;        // 1-31
+    hour: number;       // 0-23 (24-hour format)
+    minute?: number;    // 0-59 (optional, defaults to 0)
+  };
+}
+```
+
+**Returns:** `LaSoResult` object
+
+### LaSoResult Properties
+
+#### `Info: LaSoInfo`
+General chart information:
+- `AmDuong`: Yin/Yang + Gender (e.g., "Dương Nam")
+- `VTMenh`: Life Palace position (1-12)
+- `CanNam`: Year Heavenly Stem (shifted index 0-9)
+- `ChiNam`: Year Earthly Branch (shifted index 0-11)
+- `Nam`: Year in Stem-Branch format (e.g., "Canh Ngọ")
+- `Gio`: Birth hour name (e.g., "Tí")
+- `Cuc`: Bureau name (e.g., "Thổ ngũ cục")
+- `CucNH`: Bureau number (2-6)
+- **`ChuMenh`**: Life Lord star (determined by year branch)
+- **`ChuThan`**: Body Lord star (determined by year branch)
+- **`ThanCu`**: Body Palace location (e.g., "Thân cư Mệnh")
+
+#### `Cac_cung: LaSoCung[]`
+Array of 12 palaces, each containing:
+- `Name`: Palace name (Lục Thân)
+- `Than`: Body Palace indicator (0 or 1)
+- `ChinhTinh`: Array of main stars
+- `Saotot`: Array of auspicious stars
+- `Saoxau`: Array of inauspicious stars
+- `TrangSinh`: Life stage
+- Tứ Hóa indicators: `LocNhap`, `KyNhap`, `QuyenNhap`, `KhoaNhap`
+
+### LaSoResult Methods
+
+#### `toJSONString(pretty?: boolean): string`
+Convert to JSON string.
+- `pretty`: If true, formats with indentation (default: true)
+
+```typescript
+const json = laso.toJSONString();     // Pretty-printed
+const compact = laso.toJSONString(false);  // Compact
+```
+
+#### `toDisplayString(): string`
+Convert to human-readable Vietnamese text format.
+
+```typescript
+const text = laso.toDisplayString();
+console.log(text);
+// Output:
+// === LÁ SỐ TỬ VI ===
+// Tên: Nguyễn Văn A
+// Giới tính: Nam
+// ...
+```
+
+#### `getRawData(): LaSo`
+Get raw internal data structure (for advanced usage).
+
+## Examples
+
+### Example 1: Gregorian Calendar (Most Common)
+
+```typescript
+const laso = generateLaSo({
+  name: 'Nguyễn Văn A',
+  gender: 'male',
+  birth: {
+    isLunar: false,
+    year: 1990,
+    month: 5,
+    day: 15,
+    hour: 8,
+    minute: 30,
+  },
+});
+```
+
+### Example 2: Lunar Calendar
+
+```typescript
+const laso = generateLaSo({
+  name: 'Trần Thị B',
+  gender: 'female',
+  birth: {
+    isLunar: true,
+    year: 1985,
+    month: 3,
+    day: 20,
+    hour: 14,
+    minute: 0,
+  },
+});
+```
+
+### Example 3: Accessing Specific Data
+
+```typescript
+const laso = generateLaSo({...});
+
+// Get Life Palace
+const lifePalaceIndex = laso.Info.VTMenh - 1;
+const lifePalace = laso.Cac_cung[lifePalaceIndex];
+
+console.log(`Life Palace: ${lifePalace.Name}`);
+console.log(`Main Stars: ${lifePalace.ChinhTinh.map(s => s.Name).join(', ')}`);
+
+// Count total stars
+const totalStars = laso.Cac_cung.reduce(
+  (sum, palace) => sum + palace.nChinhTinh + palace.nSaoTot + palace.nSaoXau,
+  0
+);
+console.log(`Total stars: ${totalStars}`);
+```
+
+### Example 4: Save to File
+
+```typescript
+import { writeFileSync } from 'fs';
+
+const laso = generateLaSo({...});
+
+// Save JSON
+writeFileSync('chart.json', laso.toJSONString());
+
+// Save text
+writeFileSync('chart.txt', laso.toDisplayString());
+```
+
+## Hour Conversion
+
+Minutes are automatically rounded to the nearest hour:
+- `0:00-0:29` → Hour 0 (Tý)
+- `0:30-1:29` → Hour 1
+- `8:00-8:29` → Hour 8 (Thìn)
+- `8:30-9:29` → Hour 9 (Thìn/Tị boundary)
+
+The system automatically converts 24-hour format to the 12 Địa Chi hours used in Vietnamese astrology.
+
+## TypeScript Support
+
+Full type definitions are included:
+
+```typescript
+import type { 
+  GenerateLaSoInput,
+  LaSoResult,
+  LaSoInfo,
+  LaSoCung,
+  Gender,
+  BirthInfo 
+} from './src';
+
+function analyze(laso: LaSoResult): void {
+  // TypeScript knows all properties and their types
+  const { Info, Cac_cung } = laso;
+  console.log(Info.ChuMenh);  // string
+  console.log(Info.VTMenh);   // number
+  console.log(Cac_cung[0].ChinhTinh);  // CungStar[]
+}
+```
+
+## Run Examples
+
+```bash
+# Basic example
+bun run examples/example-basic.ts
+
+# New API examples
+bun run examples/example-new-api.ts
+```
+
+## Project Structure
+
+```
+src/
+  ├── generate-laso.ts      # Main API entry point
+  ├── laso-result.ts        # Result class with formatting methods
+  ├── laso.ts               # Internal chart generation
+  ├── an-sao.ts             # Star positioning engine (753 lines)
+  ├── sao-database.ts       # 111 star definitions + lookup tables
+  ├── json-formatter.ts     # JSON output formatter
+  ├── calendar-converter.ts # Gregorian ↔ Lunar conversion
+  └── types.ts              # TypeScript type definitions
+```
+
+## Key Concepts
+
+### Life Lord (Chủ Mệnh) & Body Lord (Chủ Thân)
+Determined by birth year's Earthly Branch:
+- **Ngọ year** → ChuMenh: Phá quân, ChuThan: Hỏa tinh
+- **Tý year** → ChuMenh: Tham lang, ChuThan: Hỏa tinh
+
+See [JSON Format Reference](docs/JSON_FORMAT.md) for complete mapping tables.
+
+### Body Palace Location (Thân Cư)
+Shows which palace the Body (Thân) resides in, calculated from birth month and hour.
+Format: "Thân cư [Palace Name]" (e.g., "Thân cư Mệnh")
+
+### Bureau (Cục)
+Determines the distribution of main stars:
+- Thủy nhị cục (Water 2)
+- Mộc tam cục (Wood 3)
+- Kim tứ cục (Metal 4)
+- Thổ ngũ cục (Earth 5)
+- Hỏa lục cục (Fire 6)
+
+## Documentation
+
+📁 **[Documentation Index](docs/)** - All documentation files
+
+- **[API Summary](docs/API-SUMMARY.md)** - Quick reference guide
+- **[JSON Format Reference](docs/JSON_FORMAT.md)** - Complete JSON structure reference
+- **[Usage Examples](docs/EXAMPLES.md)** - Detailed usage examples
+- **[API Migration Guide](docs/VERIFICATION.md)** - Refactoring and migration details
+
+💻 **[Code Examples](examples/)** - Runnable examples
+
+- **[example-basic.ts](examples/example-basic.ts)** - Basic usage
+- **[example-new-api.ts](examples/example-new-api.ts)** - Comprehensive examples
+
+⚙️ **Development**
+
+- **[CLAUDE.md](CLAUDE.md)** - Bun development guidelines
+- **[ORGANIZATION.md](ORGANIZATION.md)** - Project structure guide
+
+## Notes
+
+- This is a **calculation engine only** - no UI components
+- ✅ Supports both Gregorian and Lunar calendar input
+- Automatic lunar calendar conversion using `lunar-javascript` library
+- All 140+ stars are calculated and positioned
+- Complete Tứ Hóa (Four Transformations) support
+
+## Credits
+
+Ported from C# legacy code to TypeScript for modern JavaScript environments.
+
+## License
+
+MIT
