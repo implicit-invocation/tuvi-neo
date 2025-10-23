@@ -16,7 +16,7 @@
 Get structured JSON output matching the standard API format:
 
 ```typescript
-import { generateLaSoFromGregorian, formatLaSoJson } from './src';
+import { generateLaSo } from 'tuvi-neo';
 
 const person = {
   ten: 'Nguyễn Văn A',
@@ -89,7 +89,7 @@ console.log(formatLaSo(laso));
 Use this when you already know the lunar calendar date:
 
 ```typescript
-import { generateLaSo, formatLaSo } from './src/laso';
+import { generateLaSo } from 'tuvi-neo';
 
 // Born on 15th day of 8th lunar month, Giáp Tý year, at Thìn hour
 const person = {

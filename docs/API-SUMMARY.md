@@ -47,6 +47,8 @@ class LaSoResult {
 
 ### Pattern 1: Generate and Display
 ```typescript
+import { generateLaSo } from 'tuvi-neo';
+
 const laso = generateLaSo({
   name: 'Nguyễn Văn A',
   gender: 'male',
@@ -58,12 +60,16 @@ console.log(laso.toDisplayString());
 
 ### Pattern 2: Generate and Save JSON
 ```typescript
+import { generateLaSo } from 'tuvi-neo';
+
 const laso = generateLaSo({...});
 writeFileSync('chart.json', laso.toJSONString());
 ```
 
 ### Pattern 3: Access Specific Data
 ```typescript
+import { generateLaSo } from 'tuvi-neo';
+
 const laso = generateLaSo({...});
 
 // Basic info
@@ -77,6 +83,8 @@ console.log(lifePalace.ChinhTinh);     // Main stars
 
 ### Pattern 4: Analyze Chart
 ```typescript
+import { generateLaSo, type LaSoResult } from 'tuvi-neo';
+
 function analyzeChart(laso: LaSoResult) {
   // Count stars
   const totalStars = laso.Cac_cung.reduce(
@@ -181,10 +189,10 @@ function validateBirth(birth: BirthInfo): boolean {
 
 ```typescript
 // Import types for function parameters
-import type { GenerateLaSoInput, LaSoResult } from './src';
+import type { GenerateLaSoInput, LaSoResult } from 'tuvi-neo';
 
 // Import types for property access
-import type { LaSoInfo, LaSoCung, CungStar } from './src';
+import type { LaSoInfo, LaSoCung, CungStar } from 'tuvi-neo';
 
 // Type-safe palace iteration
 function findPalaceByName(laso: LaSoResult, name: string): LaSoCung | undefined {

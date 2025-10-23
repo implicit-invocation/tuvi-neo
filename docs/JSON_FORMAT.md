@@ -184,7 +184,7 @@ The `Cac_cung` array contains palaces in this order:
 ## Usage Example
 
 ```typescript
-import { generateLaSoFromGregorian, formatLaSoJson } from './src';
+import { generateLaSo } from 'tuvi-neo';
 import { writeFileSync } from 'fs';
 
 const laso = generateLaSoFromGregorian({
