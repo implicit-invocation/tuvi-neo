@@ -4,3 +4,4 @@ dist
 .DS_Store
 test-dist.mjs
 test-dist.cjs
+output.json
