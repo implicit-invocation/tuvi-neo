@@ -1,16 +1,36 @@
 {
   "name": "tuvi-neo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vietnamese Ziwei Doushu (Tử Vi Đẩu Số) natal chart calculation library",
   "repository": {
     "type": "git",
     "url": "https://github.com/implicit-invocation/tuvi-neo.git"
   },
   "homepage": "https://github.com/implicit-invocation/tuvi-neo#readme",
-  "main": "index.ts",
-  "module": "index.ts",
-  "types": "index.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun run build.ts && bun run build:types",
+    "build:types": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "bun run build"
+  },
   "keywords": [
     "tuvi",
     "ziwei-doushu",

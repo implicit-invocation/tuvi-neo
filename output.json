@@ -1,0 +1,1051 @@
+{
+  "Info": {
+    "AmDuong": "Dương Nam",
+    "VTMenh": 4,
+    "CanNam": 0,
+    "ChiNam": 10,
+    "SoCuc": 35,
+    "Gio": "Tí",
+    "Ngay": 2,
+    "Thang": 2,
+    "Nam": "Canh Ngọ",
+    "Cuc": "Thổ ngũ cục",
+    "CucNH": 5,
+    "ChuMenh": "Phá quân",
+    "ChuThan": "Hỏa tinh",
+    "ThanCu": "Thân cư Mệnh"
+  },
+  "Cac_cung": [
+    {
+      "Name": "Tử tức",
+      "Than": 0,
+      "SoCuc": 5,
+      "Tuan": 0,
+      "Triet": 0,
+      "LuuTuan": 0,
+      "LuuTriet": 0,
+      "nChinhTinh": 0,
+      "ChinhTinh": [],
+      "nSaoTot": 1,
+      "Saotot": [
+        {
+          "Name": "Tướng quân",
+          "NguHanh": 3,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "nSaoXau": 3,
+      "Saoxau": [
+        {
+          "Name": "Tuế phá",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Thiên khốc",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 0,
+          "Status": "Đ"
+        },
+        {
+          "Name": "Thiên hư",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 0,
+          "Status": "Đ"
+        }
+      ],
+      "TrangSinh": "Đế vượng",
+      "TrangSinhNH": 5,
+      "ThangHan": 1,
+      "LuuDaiHan": 1,
+      "LuuDaiHanTen": "",
+      "LuuTieuHanTen": "",
+      "LocNhap": null,
+      "KyNhap": "",
+      "QuyenNhap": null,
+      "KhoaNhap": null,
+      "TieuHan": "Tí",
+      "CanCung": 7,
+      "ChiCung": 0,
+      "NguHanhCung": 2
+    },
+    {
+      "Name": "Phu thê",
+      "Than": 0,
+      "SoCuc": 15,
+      "Tuan": 0,
+      "Triet": 0,
+      "LuuTuan": 0,
+      "LuuTriet": 0,
+      "nChinhTinh": 0,
+      "ChinhTinh": [],
+      "nSaoTot": 3,
+      "Saotot": [
+        {
+          "Name": "Long đức",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Tấu thư",
+          "NguHanh": 1,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Đường phù",
+          "NguHanh": 3,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "nSaoXau": 1,
+      "Saoxau": [
+        {
+          "Name": "Hỏa tinh",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 1,
+          "Status": "H"
+        }
+      ],
+      "TrangSinh": "Suy",
+      "TrangSinhNH": 6,
+      "ThangHan": 2,
+      "LuuDaiHan": 1,
+      "LuuDaiHanTen": "",
+      "LuuTieuHanTen": "",
+      "LocNhap": null,
+      "KyNhap": null,
+      "QuyenNhap": null,
+      "KhoaNhap": null,
+      "TieuHan": "Sữu",
+      "CanCung": 8,
+      "ChiCung": 1,
+      "NguHanhCung": 5
+    },
+    {
+      "Name": "Huynh đệ",
+      "Than": 0,
+      "SoCuc": 25,
+      "Tuan": 0,
+      "Triet": 0,
+      "LuuTuan": 0,
+      "LuuTriet": 0,
+      "nChinhTinh": 0,
+      "ChinhTinh": [],
+      "nSaoTot": 4,
+      "Saotot": [
+        {
+          "Name": "Thiên việt",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 1,
+          "Status": ""
+        },
+        {
+          "Name": "Thiên y",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Phong cáo",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Thiên trù",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "nSaoXau": 3,
+      "Saoxau": [
+        {
+          "Name": "Bạch hổ",
+          "NguHanh": 1,
+          "Type": 3,
+          "Highline": 0,
+          "Status": "Đ"
+        },
+        {
+          "Name": "Phi liêm",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Thiên riêu",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "TrangSinh": "Bệnh",
+      "TrangSinhNH": 7,
+      "ThangHan": 3,
+      "LuuDaiHan": 1,
+      "LuuDaiHanTen": "",
+      "LuuTieuHanTen": "",
+      "LocNhap": null,
+      "KyNhap": null,
+      "QuyenNhap": null,
+      "KhoaNhap": null,
+      "TieuHan": "Dần",
+      "CanCung": 9,
+      "ChiCung": 2,
+      "NguHanhCung": 3
+    },
+    {
+      "Name": "Mệnh",
+      "Than": 1,
+      "SoCuc": 35,
+      "Tuan": 0,
+      "Triet": 0,
+      "LuuTuan": 0,
+      "LuuTriet": 0,
+      "nChinhTinh": 2,
+      "ChinhTinh": [
+        {
+          "Name": "Liêm trinh",
+          "Status": "H",
+          "NguHanh": 4
+        },
+        {
+          "Name": "Phá quân",
+          "Status": "H",
+          "NguHanh": 2
+        }
+      ],
+      "nSaoTot": 5,
+      "Saotot": [
+        {
+          "Name": "Phúc đức",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Hỉ thần",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Thiên đức",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Đào hoa",
+          "NguHanh": 3,
+          "Type": 3,
+          "Highline": 1,
+          "Status": "Đ"
+        },
+        {
+          "Name": "Thiên hỉ",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "nSaoXau": 1,
+      "Saoxau": [
+        {
+          "Name": "Linh tinh",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 1,
+          "Status": "Đ"
+        }
+      ],
+      "TrangSinh": "Tử",
+      "TrangSinhNH": 8,
+      "ThangHan": 4,
+      "LuuDaiHan": 1,
+      "LuuDaiHanTen": "",
+      "LuuTieuHanTen": "",
+      "LocNhap": null,
+      "KyNhap": null,
+      "QuyenNhap": null,
+      "KhoaNhap": null,
+      "TieuHan": "Mão",
+      "CanCung": 0,
+      "ChiCung": 3,
+      "NguHanhCung": 3
+    },
+    {
+      "Name": "Phụ mẫu",
+      "Than": 0,
+      "SoCuc": 45,
+      "Tuan": 0,
+      "Triet": 0,
+      "LuuTuan": 0,
+      "LuuTriet": 0,
+      "nChinhTinh": 0,
+      "ChinhTinh": [],
+      "nSaoTot": 5,
+      "Saotot": [
+        {
+          "Name": "Văn khúc",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 1,
+          "Status": "Đ"
+        },
+        {
+          "Name": "Thiên quý",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Phượng các",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Quốc ấn",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Giải thần",
+          "NguHanh": 3,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "nSaoXau": 4,
+      "Saoxau": [
+        {
+          "Name": "Điếu khách",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Bệnh phù",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Thiên la",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Quả tú",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "TrangSinh": "Mộ",
+      "TrangSinhNH": 9,
+      "ThangHan": 5,
+      "LuuDaiHan": 1,
+      "LuuDaiHanTen": "",
+      "LuuTieuHanTen": "",
+      "LocNhap": null,
+      "KyNhap": null,
+      "QuyenNhap": null,
+      "KhoaNhap": null,
+      "TieuHan": "Thìn",
+      "CanCung": 1,
+      "ChiCung": 4,
+      "NguHanhCung": 5
+    },
+    {
+      "Name": "Phúc đức",
+      "Than": 0,
+      "SoCuc": 55,
+      "Tuan": 0,
+      "Triet": 0,
+      "LuuTuan": 0,
+      "LuuTriet": 0,
+      "nChinhTinh": 1,
+      "ChinhTinh": [
+        {
+          "Name": "Thiên phủ",
+          "Status": "Đ",
+          "NguHanh": 5
+        }
+      ],
+      "nSaoTot": 3,
+      "Saotot": [
+        {
+          "Name": "Trực phù",
+          "NguHanh": 1,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Tả phù",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 1,
+          "Status": ""
+        },
+        {
+          "Name": "Đẩu quân",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "nSaoXau": 2,
+      "Saoxau": [
+        {
+          "Name": "Đại hao",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": "H"
+        },
+        {
+          "Name": "Phá toái",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "TrangSinh": "Tuyệt",
+      "TrangSinhNH": 10,
+      "ThangHan": 6,
+      "LuuDaiHan": 1,
+      "LuuDaiHanTen": "",
+      "LuuTieuHanTen": "",
+      "LocNhap": null,
+      "KyNhap": null,
+      "QuyenNhap": null,
+      "KhoaNhap": null,
+      "TieuHan": "Tị",
+      "CanCung": 2,
+      "ChiCung": 5,
+      "NguHanhCung": 6
+    },
+    {
+      "Name": "Điền trạch",
+      "Than": 0,
+      "SoCuc": 65,
+      "Tuan": 0,
+      "Triet": 1,
+      "LuuTuan": 0,
+      "LuuTriet": 0,
+      "nChinhTinh": 2,
+      "ChinhTinh": [
+        {
+          "Name": "Thiên đồng",
+          "Status": "H",
+          "NguHanh": 2
+        },
+        {
+          "Name": "Thái âm",
+          "Status": "H",
+          "NguHanh": 2
+        }
+      ],
+      "nSaoTot": 5,
+      "Saotot": [
+        {
+          "Name": "Thiên khôi",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 1,
+          "Status": ""
+        },
+        {
+          "Name": "Tam thai",
+          "NguHanh": 3,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Thai phụ",
+          "NguHanh": 1,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Hóa khoa",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 1,
+          "Status": ""
+        },
+        {
+          "Name": "Thiên phúc",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "nSaoXau": 3,
+      "Saoxau": [
+        {
+          "Name": "Thái tuế",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Phục binh",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Hóa kỵ",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 1,
+          "Status": ""
+        }
+      ],
+      "TrangSinh": "Thai",
+      "TrangSinhNH": 11,
+      "ThangHan": 7,
+      "LuuDaiHan": 1,
+      "LuuDaiHanTen": "",
+      "LuuTieuHanTen": "",
+      "LocNhap": null,
+      "KyNhap": "Hóa kỵ",
+      "QuyenNhap": null,
+      "KhoaNhap": "Hóa khoa",
+      "TieuHan": "Ngọ",
+      "CanCung": 3,
+      "ChiCung": 6,
+      "NguHanhCung": 6
+    },
+    {
+      "Name": "Quan lộc",
+      "Than": 0,
+      "SoCuc": 75,
+      "Tuan": 0,
+      "Triet": 1,
+      "LuuTuan": 0,
+      "LuuTriet": 0,
+      "nChinhTinh": 2,
+      "ChinhTinh": [
+        {
+          "Name": "Vũ khúc",
+          "Status": "M",
+          "NguHanh": 1
+        },
+        {
+          "Name": "Tham lang",
+          "Status": "M",
+          "NguHanh": 2
+        }
+      ],
+      "nSaoTot": 2,
+      "Saotot": [
+        {
+          "Name": "Thiếu dương",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": "H"
+        },
+        {
+          "Name": "Hóa quyền",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 1,
+          "Status": ""
+        }
+      ],
+      "nSaoXau": 3,
+      "Saoxau": [
+        {
+          "Name": "Quan phủ",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Đà la",
+          "NguHanh": 1,
+          "Type": 3,
+          "Highline": 1,
+          "Status": "Đ"
+        },
+        {
+          "Name": "Thiên Không",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "TrangSinh": "Dưỡng",
+      "TrangSinhNH": 12,
+      "ThangHan": 8,
+      "LuuDaiHan": 1,
+      "LuuDaiHanTen": "",
+      "LuuTieuHanTen": "",
+      "LocNhap": null,
+      "KyNhap": null,
+      "QuyenNhap": "Hóa quyền",
+      "KhoaNhap": null,
+      "TieuHan": "Mùi",
+      "CanCung": 4,
+      "ChiCung": 7,
+      "NguHanhCung": 5
+    },
+    {
+      "Name": "Nô bộc",
+      "Than": 0,
+      "SoCuc": 85,
+      "Tuan": 0,
+      "Triet": 0,
+      "LuuTuan": 0,
+      "LuuTriet": 0,
+      "nChinhTinh": 2,
+      "ChinhTinh": [
+        {
+          "Name": "Thái dương",
+          "Status": "H",
+          "NguHanh": 4
+        },
+        {
+          "Name": "Cự môn",
+          "Status": "Đ",
+          "NguHanh": 2
+        }
+      ],
+      "nSaoTot": 6,
+      "Saotot": [
+        {
+          "Name": "Lộc tồn",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 1,
+          "Status": ""
+        },
+        {
+          "Name": "Bác sĩ",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Bát tọa",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Địa giải",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Hóa lộc",
+          "NguHanh": 3,
+          "Type": 3,
+          "Highline": 1,
+          "Status": ""
+        },
+        {
+          "Name": "Thiên mã",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 1,
+          "Status": ""
+        }
+      ],
+      "nSaoXau": 4,
+      "Saoxau": [
+        {
+          "Name": "Tang môn",
+          "NguHanh": 3,
+          "Type": 3,
+          "Highline": 0,
+          "Status": "Đ"
+        },
+        {
+          "Name": "Thiên thương",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Cô thần",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Lưu hà",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "TrangSinh": "Tràng sinh",
+      "TrangSinhNH": 1,
+      "ThangHan": 9,
+      "LuuDaiHan": 1,
+      "LuuDaiHanTen": "",
+      "LuuTieuHanTen": "",
+      "LocNhap": "Hóa lộc",
+      "KyNhap": null,
+      "QuyenNhap": null,
+      "KhoaNhap": null,
+      "TieuHan": "Thân",
+      "CanCung": 5,
+      "ChiCung": 8,
+      "NguHanhCung": 4
+    },
+    {
+      "Name": "Di",
+      "Than": 0,
+      "SoCuc": 95,
+      "Tuan": 0,
+      "Triet": 0,
+      "LuuTuan": 0,
+      "LuuTriet": 0,
+      "nChinhTinh": 1,
+      "ChinhTinh": [
+        {
+          "Name": "Thiên tướng",
+          "Status": "H",
+          "NguHanh": 2
+        }
+      ],
+      "nSaoTot": 7,
+      "Saotot": [
+        {
+          "Name": "Thiếu âm",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 0,
+          "Status": "Đ"
+        },
+        {
+          "Name": "Lực sĩ",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Hữu bật",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 1,
+          "Status": ""
+        },
+        {
+          "Name": "Hồng loan",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 1,
+          "Status": ""
+        },
+        {
+          "Name": "Thiên giải",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Thiên tài",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Thiên thọ",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "nSaoXau": 1,
+      "Saoxau": [
+        {
+          "Name": "Kình dương",
+          "NguHanh": 1,
+          "Type": 3,
+          "Highline": 1,
+          "Status": "H"
+        }
+      ],
+      "TrangSinh": "Mộc dục",
+      "TrangSinhNH": 2,
+      "ThangHan": 10,
+      "LuuDaiHan": 1,
+      "LuuDaiHanTen": "",
+      "LuuTieuHanTen": "",
+      "LocNhap": null,
+      "KyNhap": null,
+      "QuyenNhap": null,
+      "KhoaNhap": null,
+      "TieuHan": "Dậu",
+      "CanCung": 6,
+      "ChiCung": 9,
+      "NguHanhCung": 4
+    },
+    {
+      "Name": "Tật ách",
+      "Than": 0,
+      "SoCuc": 105,
+      "Tuan": 1,
+      "Triet": 0,
+      "LuuTuan": 0,
+      "LuuTriet": 0,
+      "nChinhTinh": 2,
+      "ChinhTinh": [
+        {
+          "Name": "Thiên cơ",
+          "Status": "M",
+          "NguHanh": 3
+        },
+        {
+          "Name": "Thiên lương",
+          "Status": "M",
+          "NguHanh": 3
+        }
+      ],
+      "nSaoTot": 5,
+      "Saotot": [
+        {
+          "Name": "Thanh long",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 0,
+          "Status": "Đ"
+        },
+        {
+          "Name": "Văn xương",
+          "NguHanh": 1,
+          "Type": 3,
+          "Highline": 1,
+          "Status": "Đ"
+        },
+        {
+          "Name": "Ân quang",
+          "NguHanh": 3,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Long trì",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Hoa cái",
+          "NguHanh": 1,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "nSaoXau": 4,
+      "Saoxau": [
+        {
+          "Name": "Quan phù",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Thiên hình",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 1,
+          "Status": "H"
+        },
+        {
+          "Name": "Thiên sứ",
+          "NguHanh": 2,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Địa võng",
+          "NguHanh": 5,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "TrangSinh": "Quan đới",
+      "TrangSinhNH": 3,
+      "ThangHan": 11,
+      "LuuDaiHan": 1,
+      "LuuDaiHanTen": "",
+      "LuuTieuHanTen": "",
+      "LocNhap": null,
+      "KyNhap": null,
+      "QuyenNhap": null,
+      "KhoaNhap": null,
+      "TieuHan": "Tuất",
+      "CanCung": 7,
+      "ChiCung": 10,
+      "NguHanhCung": 5
+    },
+    {
+      "Name": "Tài bạch",
+      "Than": 0,
+      "SoCuc": 115,
+      "Tuan": 1,
+      "Triet": 0,
+      "LuuTuan": 0,
+      "LuuTriet": 0,
+      "nChinhTinh": 2,
+      "ChinhTinh": [
+        {
+          "Name": "Tử vi",
+          "Status": "B",
+          "NguHanh": 5
+        },
+        {
+          "Name": "Thất sát",
+          "Status": "V",
+          "NguHanh": 1
+        }
+      ],
+      "nSaoTot": 3,
+      "Saotot": [
+        {
+          "Name": "Nguyệt đức",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Thiên quan",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Văn tinh",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "nSaoXau": 5,
+      "Saoxau": [
+        {
+          "Name": "Tử phù",
+          "NguHanh": 1,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        },
+        {
+          "Name": "Tiểu hao",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": "H"
+        },
+        {
+          "Name": "Địa kiếp",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 1,
+          "Status": "Đ"
+        },
+        {
+          "Name": "Địa không",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 1,
+          "Status": "Đ"
+        },
+        {
+          "Name": "Kiếp sát",
+          "NguHanh": 4,
+          "Type": 3,
+          "Highline": 0,
+          "Status": ""
+        }
+      ],
+      "TrangSinh": "Lâm quan",
+      "TrangSinhNH": 4,
+      "ThangHan": 12,
+      "LuuDaiHan": 1,
+      "LuuDaiHanTen": "",
+      "LuuTieuHanTen": "",
+      "LocNhap": null,
+      "KyNhap": null,
+      "QuyenNhap": null,
+      "KhoaNhap": null,
+      "TieuHan": "Hợi",
+      "CanCung": 8,
+      "ChiCung": 11,
+      "NguHanhCung": 2
+    }
+  ]
+}
