@@ -54,11 +54,10 @@ export interface GenerateLaSoInput {
 export function generateLaSo(input: GenerateLaSoInput): LaSoResult {
   const { name, gender, birth } = input;
   
-  // Convert minute to fractional hour (e.g., 30 minutes = 0.5 hour)
-  const hourWithMinute = birth.hour + (birth.minute || 0) / 60;
-  
-  // Round to nearest hour for Địa Chi calculation
-  const roundedHour = Math.round(hourWithMinute);
+  // Địa Chi hours are based on 2-hour periods starting at 23:00
+  // 23:00-00:59 = Tí (1), 01:00-02:59 = Sửu (2), etc.
+  // No rounding needed - just use the actual hour
+  const hour = birth.hour;
   
   let internalLaso;
   
@@ -70,7 +69,8 @@ export function generateLaSo(input: GenerateLaSoInput): LaSoResult {
     const dcNam = ((birth.year - 4) % 12) + 1;
     
     // Convert hour to Địa Chi (1-12)
-    const gio = roundedHour === 23 ? 1 : Math.floor((roundedHour + 1) / 2) + 1;
+    // 23:00-00:59 = Tí (1), 01:00-02:59 = Sửu (2), etc.
+    const gio = (hour === 23 || hour === 0) ? 1 : Math.floor((hour + 1) / 2) + 1;
     
     internalLaso = generateLaSoInternal({
       ten: name,
@@ -89,7 +89,7 @@ export function generateLaSo(input: GenerateLaSoInput): LaSoResult {
       year: birth.year,
       month: birth.month,
       day: birth.day,
-      hour: roundedHour,
+      hour: hour,
     });
   }
   

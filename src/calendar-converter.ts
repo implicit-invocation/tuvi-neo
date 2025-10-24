@@ -39,7 +39,7 @@ export function gregorianToLunar(gregorian: GregorianDate): LunarDate {
   
   // Convert hour (0-23) to Địa Chi hour (1-12)
   // 23:00-00:59 = Tý (1), 01:00-02:59 = Sửu (2), etc.
-  const gio = gregorian.hour === 23 ? 1 : Math.floor((gregorian.hour + 1) / 2) + 1;
+  const gio = (gregorian.hour === 23 || gregorian.hour === 0) ? 1 : Math.floor((gregorian.hour + 1) / 2) + 1;
   
   return {
     year: lunar.getYear(),

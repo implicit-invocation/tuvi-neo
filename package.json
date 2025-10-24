@@ -1,6 +1,6 @@
 {
   "name": "tuvi-neo",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Vietnamese Ziwei Doushu (Tử Vi Đẩu Số) natal chart calculation library",
   "repository": {
     "type": "git",
