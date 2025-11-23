@@ -8,7 +8,7 @@ A TypeScript implementation of Vietnamese Ziwei Doushu (Tử Vi Đẩu Số) nat
 
 - ✅ **Clean API**: Single `generateLaSo()` function
 - ✅ **Type-Safe**: Full TypeScript support with complete type definitions
-- ✅ **Minimal Dependencies**: Only 1 runtime dependency (lunar-javascript), runs on Bun, Node.js, and browsers
+- ✅ **Minimal Dependencies**: Only 1 runtime dependency (@dqcai/vn-lunar), runs on Bun, Node.js, and browsers
 - ✅ **Dual Calendar Support**: Gregorian (dương lịch) and Lunar (âm lịch)
 - ✅ **Multiple Output Formats**: JSON and human-readable text
 - ✅ **Direct Property Access**: Access chart data as typed properties
@@ -313,7 +313,7 @@ Determines the distribution of main stars:
 
 - This is a **calculation engine only** - no UI components
 - ✅ Supports both Gregorian and Lunar calendar input
-- Automatic lunar calendar conversion using `lunar-javascript` library
+- Automatic lunar calendar conversion using `@dqcai/vn-lunar` library
 - All 140+ stars are calculated and positioned
 - Complete Tứ Hóa (Four Transformations) support
 

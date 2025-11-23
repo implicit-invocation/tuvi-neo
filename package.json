@@ -39,7 +39,7 @@
     "tu-vi-dau-so"
   ],
   "dependencies": {
-    "lunar-javascript": "^1.7.6"
+    "@dqcai/vn-lunar": "^1.0.1"
   },
   "devDependencies": {
     "@types/bun": "latest"

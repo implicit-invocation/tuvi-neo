@@ -1,5 +1,5 @@
 // Lunar calendar conversion utilities
-import { Solar, Lunar } from 'lunar-javascript';
+import { LunarCalendar } from '@dqcai/vn-lunar';
 
 export interface GregorianDate {
   year: number;
@@ -21,30 +21,32 @@ export interface LunarDate {
  * Convert Gregorian date to Lunar date with Stems and Branches
  */
 export function gregorianToLunar(gregorian: GregorianDate): LunarDate {
-  const solar = Solar.fromYmdHms(
-    gregorian.year,
-    gregorian.month,
+  // Use @dqcai/vn-lunar which correctly handles Vietnam timezone (UTC+7)
+  const calendar = LunarCalendar.fromSolar(
     gregorian.day,
-    gregorian.hour,
-    0,
-    0
+    gregorian.month,
+    gregorian.year
   );
   
-  const lunar = solar.getLunar();
+  const lunar = calendar.lunarDate;
   
-  // Get year stems and branches
-  const yearGanZhi = lunar.getYearInGanZhi();
-  const tcNam = getThienCanIndex(yearGanZhi.substring(0, 1));
-  const dcNam = getDiaChiIndex(yearGanZhi.substring(1, 2));
+  // Get year stems and branches from "Can Chi" string (e.g., "Kỷ Tỵ")
+  const yearCanChi = calendar.yearCanChi; // "Can Chi"
+  const parts = yearCanChi.split(' ');
+  const canStr = parts[0] || '';
+  const chiStr = parts[1] || '';
+  
+  const tcNam = getThienCanIndex(canStr);
+  const dcNam = getDiaChiIndex(chiStr);
   
   // Convert hour (0-23) to Địa Chi hour (1-12)
   // 23:00-00:59 = Tý (1), 01:00-02:59 = Sửu (2), etc.
   const gio = (gregorian.hour === 23 || gregorian.hour === 0) ? 1 : Math.floor((gregorian.hour + 1) / 2) + 1;
   
   return {
-    year: lunar.getYear(),
-    month: lunar.getMonth(),
-    day: lunar.getDay(),
+    year: lunar.year,
+    month: lunar.month,
+    day: lunar.day,
     hour: gio,
     tcNam,
     dcNam,
@@ -52,41 +54,41 @@ export function gregorianToLunar(gregorian: GregorianDate): LunarDate {
 }
 
 /**
- * Get Thiên Can index from Chinese character
+ * Get Thiên Can index from Vietnamese string or Chinese character
  */
 function getThienCanIndex(char: string): number {
   const tcMap: { [key: string]: number } = {
-    '甲': 1, // Giáp
-    '乙': 2, // Ất
-    '丙': 3, // Bính
-    '丁': 4, // Đinh
-    '戊': 5, // Mậu
-    '己': 6, // Kỷ
-    '庚': 7, // Canh
-    '辛': 8, // Tân
-    '壬': 9, // Nhâm
-    '癸': 10, // Quý
+    'Giáp': 1, '甲': 1,
+    'Ất': 2, '乙': 2,
+    'Bính': 3, '丙': 3,
+    'Đinh': 4, '丁': 4,
+    'Mậu': 5, '戊': 5,
+    'Kỷ': 6, '己': 6,
+    'Canh': 7, '庚': 7,
+    'Tân': 8, '辛': 8,
+    'Nhâm': 9, '壬': 9,
+    'Quý': 10, '癸': 10,
   };
   return tcMap[char] || 1;
 }
 
 /**
- * Get Địa Chi index from Chinese character
+ * Get Địa Chi index from Vietnamese string or Chinese character
  */
 function getDiaChiIndex(char: string): number {
   const dcMap: { [key: string]: number } = {
-    '子': 1,  // Tý
-    '丑': 2,  // Sửu
-    '寅': 3,  // Dần
-    '卯': 4,  // Mão
-    '辰': 5,  // Thìn
-    '巳': 6,  // Tị
-    '午': 7,  // Ngọ
-    '未': 8,  // Mùi
-    '申': 9,  // Thân
-    '酉': 10, // Dậu
-    '戌': 11, // Tuất
-    '亥': 12, // Hợi
+    'Tý': 1, '子': 1,
+    'Sửu': 2, '丑': 2,
+    'Dần': 3, '寅': 3,
+    'Mão': 4, '卯': 4,
+    'Thìn': 5, '辰': 5,
+    'Tị': 6, '巳': 6, 'Tỵ': 6, // Handle Tị/Tỵ variation
+    'Ngọ': 7, '午': 7,
+    'Mùi': 8, '未': 8,
+    'Thân': 9, '申': 9,
+    'Dậu': 10, '酉': 10,
+    'Tuất': 11, '戌': 11,
+    'Hợi': 12, '亥': 12,
   };
   return dcMap[char] || 1;
 }
