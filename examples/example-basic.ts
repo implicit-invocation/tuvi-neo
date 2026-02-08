@@ -5,17 +5,16 @@ console.log("=".repeat(70));
 console.log("Vietnamese Ziwei Doushu (Tử Vi) Chart Generator");
 console.log("=".repeat(70));
 
-// Example: Generate chart from Gregorian date
 const laso = generateLaSo({
-  name: "Dương Thành Đạt",
-  gender: "male",
+  name: "TTHN",
+  gender: "female",
   birth: {
     isLunar: false,
-    year: 1990,
-    month: 2,
-    day: 26,
-    hour: 0,
-    minute: 15, // 00:15 will round to hour 0 (Tý)
+    year: 1993,
+    month: 12,
+    day: 25,
+    hour: 23,
+    minute: 15,
   },
 });
 

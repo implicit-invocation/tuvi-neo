@@ -116,7 +116,7 @@ export function formatLaSoJson(laso: LaSo): JsonOutput {
   }
 
   const info: InfoSection = {
-    AmDuong: (laso.dnan ? "Dương" : "Âm") + (laso.male ? " Nam" : " Nữ"),
+    AmDuong: (laso.tcNam % 2 === 1 ? "Dương" : "Âm") + (laso.male ? " Nam" : " Nữ"),
     VTMenh: laso.menh,
     CanNam: (laso.tcNam - 1 + 4) % 10, // Shifted index for year stem
     ChiNam: (laso.dcNam - 1 + 4) % 12, // Shifted index for year branch

@@ -21,11 +21,20 @@ export interface LunarDate {
  * Convert Gregorian date to Lunar date with Stems and Branches
  */
 export function gregorianToLunar(gregorian: GregorianDate): LunarDate {
+  // Tí hour (23:00-00:59) belongs to the next day in Vietnamese/Chinese astrology
+  let { year, month, day } = gregorian;
+  if (gregorian.hour === 23) {
+    const d = new Date(year, month - 1, day + 1);
+    year = d.getFullYear();
+    month = d.getMonth() + 1;
+    day = d.getDate();
+  }
+
   // Use @dqcai/vn-lunar which correctly handles Vietnam timezone (UTC+7)
   const calendar = LunarCalendar.fromSolar(
-    gregorian.day,
-    gregorian.month,
-    gregorian.year
+    day,
+    month,
+    year
   );
   
   const lunar = calendar.lunarDate;
