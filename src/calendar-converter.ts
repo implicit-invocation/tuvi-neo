@@ -69,7 +69,7 @@ function getThienCanIndex(char: string): number {
   const tcMap: { [key: string]: number } = {
     'Giáp': 1, '甲': 1,
     'Ất': 2, '乙': 2,
-    'Bính': 3, '丙': 3,
+    'Bính': 3, 'Bình': 3, '丙': 3,
     'Đinh': 4, '丁': 4,
     'Mậu': 5, '戊': 5,
     'Kỷ': 6, '己': 6,
